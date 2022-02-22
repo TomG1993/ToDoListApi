@@ -50,5 +50,20 @@ namespace ToDoListApi.Controllers
 
             return Ok(toDoRecord);
         }
+
+        [HttpPost("/ToggleStatus")]
+        public ActionResult<ToDoRecord> Push([FromBody] ToDoRecord toDoRecord)
+        {
+            var record = ToDoList.FirstOrDefault(x => x.ID == toDoRecord.ID);
+            if (record == null)
+            {
+                _logger.Log(LogLevel.Error, "Attempted to toggle an invalid record");
+                return NotFound();
+            }
+
+            record.Status = toDoRecord.Status;
+
+            return Ok(record);
+        }
     }
 }
