@@ -36,5 +36,19 @@ namespace ToDoListApi.Controllers
         {
             return ToDoList;
         }
+
+        [HttpPost("/AddToDoRecord")]
+        public async Task<ActionResult<ToDoRecord>> Post([FromBody] ToDoRecord toDoRecord)
+        {
+            if (toDoRecord == null)
+            {
+                _logger.Log(LogLevel.Error, "Attempted to add a null ToDo record");
+                return BadRequest();
+            }
+
+            ToDoList.Add(toDoRecord);
+
+            return Ok(toDoRecord);
+        }
     }
 }
