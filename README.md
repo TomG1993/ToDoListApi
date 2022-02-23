@@ -27,3 +27,5 @@ I was unable to separate the todos into groupings for Completed and Pending stat
 I have not implemented any unit tests due to already over running on time, I would have used some project style unit testing within Visual Studio such as xUnit.
 
 I did not spend any time with the CSS in this solution so the design is very basic.
+
+I have made all my changes to a master branch, if this development was to go further I would create a development branch or feature specific branches
