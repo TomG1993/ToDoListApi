@@ -29,3 +29,5 @@ I have not implemented any unit tests due to already over running on time, I wou
 I did not spend any time with the CSS in this solution so the design is very basic.
 
 I have made all my changes to a master branch, if this development was to go further I would create a development branch or feature specific branches
+
+There also needs to be some spinner to allow for the creation of a Todo
