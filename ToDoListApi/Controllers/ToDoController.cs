@@ -7,22 +7,23 @@ namespace ToDoListApi.Controllers
     [Route("[controller]")]
     public class ToDoController : Controller
     {
-        private static readonly List<ToDoRecord> ToDoList = new List<ToDoRecord>{
-        new ToDoRecord()
-        {
-            Description =  "Call friend",
-            Status = 0
-        },
-                new ToDoRecord()
-        {
-            Description =  "Pay bills",
-            Status = 0
-        },
-                new ToDoRecord()
-        {
-            Description =  "Other things",
-            Status = 0
-        } };
+        private static readonly List<ToDoRecord> ToDoList = new List<ToDoRecord>();
+        //{
+        //new ToDoRecord()
+        //{
+        //    Description =  "Call friend",
+        //    Status = 0
+        //},
+        //        new ToDoRecord()
+        //{
+        //    Description =  "Pay bills",
+        //    Status = 0
+        //},
+        //        new ToDoRecord()
+        //{
+        //    Description =  "Other things",
+        //    Status = 0
+        //} };
 
         private readonly ILogger<ToDoController> _logger;
 
