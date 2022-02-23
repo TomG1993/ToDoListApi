@@ -17,3 +17,6 @@ approach to this problem.
 • If you were unable to complete any user stories, outline why and how would
 you have liked to implement them.
 I was unable to separate the todos into groupings for Completed and Pending status
+
+
+I have not implemented any unit tests due to already over running on time, I would have used some project style unit testing within Visual Studio such as xUnit.
