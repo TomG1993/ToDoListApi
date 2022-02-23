@@ -54,6 +54,7 @@ namespace ToDoListApi.Controllers
         [HttpPost("/ToggleStatus")]
         public ActionResult<ToDoRecord> Push([FromBody] ToDoRecord toDoRecord)
         {
+            var status = toDoRecord.Status == 0 ? 1 : 0;
             var record = ToDoList.FirstOrDefault(x => x.ID == toDoRecord.ID);
             if (record == null)
             {
@@ -61,7 +62,7 @@ namespace ToDoListApi.Controllers
                 return NotFound();
             }
 
-            record.Status = toDoRecord.Status;
+            record.Status = status;
 
             return Ok(record);
         }
